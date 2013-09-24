@@ -51,8 +51,25 @@ Push code to Heroku remote to deploy.
 $ git push heroku master
 ```
 
+Sync the database.
+
+```sh
+$ heroku run python manage.py syncdb
+```
+
 View in browser.
 
 ```sh
 $ heroku open
 ```
+
+Resources
+---------
+
+http://docs.vagrantup.com/v2/getting-started/index.html
+
+https://devcenter.heroku.com/articles/getting-started-with-django
+
+http://jordanktakayama.wordpress.com/2013/02/20/lessons-learned-from-deploying-django-on-heroku/
+
+http://www.deploydjango.com/django_project_structure/index.html
