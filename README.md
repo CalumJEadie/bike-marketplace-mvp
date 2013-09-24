@@ -28,11 +28,18 @@ Run server.
 ```sh
 # Get IP address of VM.
 (vagrant vm) $ ifconfig | grep 'inet addr'
+
+# Configure database.
+
+(vagrant vm) $ export DATABASE_URL='sqlite:////tmp/bike-marketplace-mvp.sqlite'
+
+# Sync DB.
+(vagrant vm) $ python manage.py syncdb
+
 (vagrant vm) $ python manage.py runserver 0.0.0.0:8000
 ```
 
 View in browser on host machine, e.g. at http://10.250.7.241:8000/.
-```
 
 Deploying to Heroku
 -------------------
