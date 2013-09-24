@@ -1,1 +1,1 @@
-web: gunicorn basic_django_heroku_app.wsgi
+web: gunicorn bike_marketplace_mvp.wsgi

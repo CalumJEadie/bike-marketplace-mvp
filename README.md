@@ -31,11 +31,7 @@ Run server.
 (vagrant vm) $ python manage.py runserver 0.0.0.0:8000
 ```
 
-View in browser on host machine.
-
-```sh
-# e.g.
-open http://10.250.7.241:8000/
+View in browser on host machine, e.g. at http://10.250.7.241:8000/.
 ```
 
 Deploying to Heroku
@@ -43,7 +39,7 @@ Deploying to Heroku
 
 See https://devcenter.heroku.com/articles/getting-started-with-django for more information.
 
-Create a Heroku app if one hasn't already been created.
+Create a Heroku app, if one hasn't already been created.
 
 ```sh
 $ heroku create bike-marketplace-mvp
@@ -53,4 +49,10 @@ Push code to Heroku remote to deploy.
 
 ```sh
 $ git push heroku master
+```
+
+View in browser.
+
+```sh
+$ heroku open
 ```
