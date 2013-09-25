@@ -134,6 +134,7 @@ INSTALLED_APPS = [
     "account",
     "metron",
     "eventlog",
+    "gravatar",
     
     # project
     "bike_marketplace_mvp",

@@ -1,6 +1,7 @@
 {% extends "site_base.html" %}
 
 {% load i18n %}
+{% load gravatar %}
 
 {% block head_title %}{{ bike.name }}{% endblock %}
 
@@ -62,7 +63,11 @@
 
         </div>
 
-        <div class="4">
+        <div class="span4">
+
+            <img src="{% gravatar_for_user bike.account 200 %}" class="img-rounded" width="200px" />
+
+            <h3>{{ bike.account.user.username }}</h3>
 
             <p>Price: {{ bike.price }}</p>
 
