@@ -16,6 +16,9 @@ urlpatterns = patterns("",
 
     # e.g. /bikes/1/
     url(r'^bikes/(?P<bike_id>\d+)/$', views.detail, name='detail'),
+
+    # e.g. /search/
+    url(r'^search/', views.search, name='search'),    
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
