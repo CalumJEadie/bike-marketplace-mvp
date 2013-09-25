@@ -6,24 +6,68 @@
 
 {% block body %}
 
-    {{ bike.name }}
+    <h3>{{ bike.name }}</h3>
 
-    Type: {{ bike.type }}
+    <div class="row">
 
-    Brand: {{ bike.brand }}
+        <div class="span8">
 
-    Model: {{ bike.brand }}
+            <img src="{{ STATIC_URL }}img/trek_7100.jpeg" class="img-rounded">
 
-    Frame Size: {{ bike.frame_size }} cm
+            <table class="table table-striped table-bordered">
 
-    Frame Material: {{ bike.frame_material }}
+                <tr>
+                    <td>Type:</td>
+                    <td>{{ bike.type }}</td>
+                </tr>
 
-    Brakes: {{ bike.brakes }}
+                <tr>
+                    <td>Brand:</td>
+                    <td>{{ bike.brand }}</td>
+                </tr>
 
-    Model Year: {{ bike.model_year }}
+                <tr>
+                    <td>Model:</td>
+                    <td>{{ bike.model }}</td>
+                </tr>
 
-    Mileage: {{ bike.mileage }} miles
+                <tr>
+                    <td>Frame Size:</td>
+                    <td>{{ bike.frame_size }}</td>
+                </tr>
 
-    {{ bike.description }}
+                <tr>
+                    <td>Frame Material:</td>
+                    <td>{{ bike.frame_material }}</td>
+                </tr>
+
+                <tr>
+                    <td>Brakes:</td>
+                    <td>{{ bike.brakes }}</td>
+                </tr>
+
+                <tr>
+                    <td>Model Year:</td>
+                    <td>{{ bike.model_year }}</td>
+                </tr>
+
+                <tr>
+                    <td>Mileage:</td>
+                    <td>{{ bike.mileage }}</td>
+                </tr>
+
+            </table>
+
+            <p>{{ bike.description }}</p>
+
+        </div>
+
+        <div class="4">
+
+            <p>Price: {{ bike.price }}</p>
+
+        </div>
+
+    </div>
 
 {% endblock %}
