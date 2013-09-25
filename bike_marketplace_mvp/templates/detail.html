@@ -1,1 +1,29 @@
-{{ bike.name }}
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{{ bike.name }}{% endblock %}
+
+{% block body %}
+
+    {{ bike.name }}
+
+    Type: {{ bike.type }}
+
+    Brand: {{ bike.brand }}
+
+    Model: {{ bike.brand }}
+
+    Frame Size: {{ bike.frame_size }} cm
+
+    Frame Material: {{ bike.frame_material }}
+
+    Brakes: {{ bike.brakes }}
+
+    Model Year: {{ bike.model_year }}
+
+    Mileage: {{ bike.mileage }} miles
+
+    {{ bike.description }}
+
+{% endblock %}
