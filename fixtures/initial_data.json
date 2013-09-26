@@ -31,5 +31,51 @@
             "type": "Road", 
             "description": "Road bike speed and upright comfort join together for aggressive fitness rides or long commutes. Available with lightweight TCT Carbon or hydroformed Alpha Black Aluminum frames, rigid performance forks and fast-rolling 700c wheels.\r\nIf you want a practical bike for daily use or develop your cycling fitness as an alternative to the gym the Trek 7100 2009 Women's Hybrid Bike is a great option. Upright position, reliable easy to use brakes and gears with a durable wheel set means you can ride comfortably and safely whatever your journey.\r\n"
         }
+    },
+    {
+        "pk": 2, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "account": 1, 
+            "model_year": 2011, 
+            "name": "Dawes Giro 200 Road Bike", 
+            "brakes": "Rim Brakes", 
+            "brand": "Dawes", 
+            "mileage": 1000, 
+            "frame_size": 58, 
+            "model": "Giro 200", 
+            "type": "Road", 
+            "description": ""
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "account": 1, 
+            "name": "Dawes Ultra", 
+            "brakes": "Rim Brakes", 
+            "brand": "Dawes", 
+            "mileage": 500, 
+            "frame_size": 58, 
+            "model": "Ultra", 
+            "type": "Road", 
+            "description": "http://www.ebay.co.uk/itm/Dawes-Ultra-stored-since-new-1995-SEE-PHOTOS-/251344125693?pt=UK_Bikes_GL&hash=item3a8546fefd.\r\n"
+        }
+    },
+    {
+        "pk": 4, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "account": 1, 
+            "name": "Giant Cadex 980C Road Bike", 
+            "brakes": "Rim Brakes", 
+            "brand": "Giant", 
+            "mileage": 2000, 
+            "frame_size": 58, 
+            "model": "Cadex 980C", 
+            "type": "Road", 
+            "description": "http://www.ebay.co.uk/itm/Giant-Cadex-980C-Carbon-Fibre-Road-Bike-57cm-/121179646460?pt=UK_Bikes_GL&hash=item1c36dea9fc.\r\n"
+        }
     }
 ]
