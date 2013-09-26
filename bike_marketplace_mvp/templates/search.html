@@ -15,6 +15,7 @@
     {% for bike in bikes %}
 
         <tr><td>
+            <a href="/bikes/{{ bike.pk }}/">
             <div class="row">
                 <div class="span2">
                     <img src="{{ STATIC_URL }}img/trek_7100.jpeg" class="img-rounded" wigth="100px">
@@ -26,6 +27,7 @@
                     {{ bike.name }}
                 </div>
             </div>
+            </a>
         </td></tr>
 
     {% endfor %}
