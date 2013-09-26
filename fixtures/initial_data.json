@@ -19,7 +19,7 @@
         "pk": 1, 
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
-            "account": 1, 
+            "seller": 1, 
             "model_year": 2009, 
             "name": "Trek 7100 Road Bike", 
             "brakes": "Rim Brakes", 
@@ -36,7 +36,7 @@
         "pk": 2, 
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
-            "account": 1, 
+            "seller": 1, 
             "model_year": 2011, 
             "name": "Dawes Giro 200 Road Bike", 
             "brakes": "Rim Brakes", 
@@ -52,7 +52,7 @@
         "pk": 3, 
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
-            "account": 1, 
+            "seller": 1, 
             "name": "Dawes Ultra", 
             "brakes": "Rim Brakes", 
             "brand": "Dawes", 
@@ -67,7 +67,7 @@
         "pk": 4, 
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
-            "account": 1, 
+            "seller": 1, 
             "name": "Giant Cadex 980C Road Bike", 
             "brakes": "Rim Brakes", 
             "brand": "Giant", 

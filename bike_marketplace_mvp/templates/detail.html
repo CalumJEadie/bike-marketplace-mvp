@@ -68,9 +68,9 @@
 
             <div style="margin-top:1em; border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
 
-                <img src="{{ STATIC_URL }}img/users/{{ bike.account.id }}" class="img-rounded" style="width: 250px" />
+                <img src="{{ STATIC_URL }}img/users/{{ bike.seller.account.id }}" class="img-rounded" style="width: 250px" />
 
-                <h1>{{ bike.account.user.username }}</h1>
+                <h1>{{ bike.seller.account.user.username }}</h1>
 
                 <button class="btn btn-large btn-block btn-primary" type="button">Contact Me</button>
 
@@ -78,15 +78,19 @@
 
                     <caption>Social Media</caption>
 
+                    {% if bike.seller.has_facebook %}
                     <tr>
                         <td>Facebook</td>
-                        <td><strong>347 friends</strong></td>
+                        <td><strong>{{ bike.seller.facebook_friends }} friends</strong></td>
                     </tr>
+                    {% endif %}
 
+                    {% if bike.seller.has_linkedin %}
                     <tr>
                         <td>Linkedin</td>
-                        <td><strong>184 connections</strong></td>
+                        <td><strong>{{ bike.seller.linkedin_connections }} connections</strong></td>
                     </tr>
+                    {% endif %}
 
                 </table>
 
@@ -94,15 +98,19 @@
 
                     <caption>Forum Memberships</caption>
 
+                    {% if bike.seller.has_road %}
                     <tr>
                         <td>road.css</td>
                         <td><strong>Since May 2007, 43 posts</strong></td>
                     </tr>
+                    {% endif %}
 
+                    {% if bike.seller.has_single_track %}
                     <tr>
                         <td>SingleTrack</td>
                         <td><strong>Since January 2010, 22 posts</strong></td>
                     </tr>
+                    {% endif %}
 
                 </table>
 

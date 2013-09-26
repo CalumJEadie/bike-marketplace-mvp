@@ -1,10 +1,35 @@
 from django.db import models
+from django.db.models.signals import post_save
 
 from account.models import Account
 
+class Seller(models.Model):
+    """
+    Following design pattern from http://gistflow.com/posts/725-how-to-extend-the-behaviour-of-the-user-class-in-django-1-5.
+    """
+
+    account = models.OneToOneField(Account, unique=True)
+
+    has_facebook = models.BooleanField(default=True)
+    facebook_friends = models.PositiveSmallIntegerField(blank=True, default=347)
+    has_linkedin = models.BooleanField(default=True)
+    linkedins_connections = models.PositiveSmallIntegerField(blank=True, default=184)
+    has_road = models.BooleanField(default=True)
+    has_single_track = models.BooleanField(default=True)
+
+    @classmethod
+    def _create(cls, sender, instance, created, **kwargs):
+        if created:
+            profile, created = cls.objects.get_or_create(account=instance)
+
+    def __unicode__(self):
+        return unicode(self.account)
+
+post_save.connect(Seller._create, sender=Account)
+
 class Bike(models.Model):
 
-    account = models.ForeignKey(Account)
+    seller = models.ForeignKey(Seller)
 
     name = models.CharField(max_length=100)
     # types from bikesoup.co.uk
