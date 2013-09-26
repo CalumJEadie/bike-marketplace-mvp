@@ -48,10 +48,14 @@ Deploying to Heroku
 
 See https://devcenter.heroku.com/articles/getting-started-with-django for more information.
 
-Create a Heroku app, if one hasn't already been created.
+Create and configure a Heroku app, if one hasn't already been created.
 
 ```sh
+# Create.
 $ heroku create bike-marketplace-mvp
+
+# Configure database.
+heroku config:set DATABASE_URL={{production value here}}
 ```
 
 Push code to Heroku remote to deploy.
