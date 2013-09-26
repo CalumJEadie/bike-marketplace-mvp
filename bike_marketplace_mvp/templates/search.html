@@ -1,6 +1,7 @@
 {% extends "site_base.html" %}
 
 {% load i18n %}
+{% load gravatar %}
 
 {% block head_title %}{% endblock %}
 
@@ -21,7 +22,7 @@
                     <img src="{{ STATIC_URL }}img/{{ bike.id }}" class="img-rounded" wigth="100px">
                 </div>
                 <div class="span1">
-                    
+                    <img src="{% gravatar_for_user bike.account 50 %}" class="img-rounded" width="50px" />
                 </div>
                 <div>
                     {{ bike.name }}
