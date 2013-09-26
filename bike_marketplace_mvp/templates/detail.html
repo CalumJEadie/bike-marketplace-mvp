@@ -55,11 +55,27 @@
 
         <div class="span4">
 
-            <img src="{% gravatar_for_user bike.account 200 %}" class="img-rounded" style="width: 200px" />
+            <div style="border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
 
-            <h3>{{ bike.account.user.username }}</h3>
+                <h1>£{{ bike.price }}</h1>
 
-            <p>Price: {{ bike.price }}</p>
+                <h3>{{ bike.type }} / {{ bike.frame_size }}</h3>
+
+                <button class="btn btn-large btn-success" type="button">Buy Now</button>
+
+                <button class="btn btn-large btn-success" type="button">Arrange Viewing</button>
+
+            </div>
+
+            <div style="margin-top:1em; border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
+
+                <img src="{% gravatar_for_user bike.account 250 %}" class="img-rounded" style="width: 250px" />
+
+                <h1>{{ bike.account.user.username }}</h1>
+
+                <button class="btn btn-large btn-block btn-primary" type="button">Contact Me</button>
+
+            </div>
 
         </div>
 

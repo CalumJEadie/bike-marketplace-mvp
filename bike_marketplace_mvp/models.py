@@ -51,6 +51,7 @@ class Bike(models.Model):
     description = models.TextField(blank=True, default="""Road bike speed and upright comfort join together for aggressive fitness rides or long commutes. Available with lightweight TCT Carbon or hydroformed Alpha Black Aluminum frames, rigid performance forks and fast-rolling 700c wheels.
 If you want a practical bike for daily use or develop your cycling fitness as an alternative to the gym the Trek 7100 2009 Women's Hybrid Bike is a great option. Upright position, reliable easy to use brakes and gears with a durable wheel set means you can ride comfortably and safely whatever your journey.
 """)
+    price = models.PositiveSmallIntegerField(blank=True, default=200)
 
     def __unicode__(self):
         return self.name
