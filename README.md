@@ -48,6 +48,12 @@ Deploying to Heroku
 
 See https://devcenter.heroku.com/articles/getting-started-with-django for more information.
 
+Test whether Procfile works.
+
+```sh
+$ foreman start
+```
+
 Create and configure a Heroku app, if one hasn't already been created.
 
 ```sh
@@ -98,3 +104,5 @@ http://stackoverflow.com/questions/17036301/configuring-postgresql-database-for-
 http://blog.smalleycreative.com/tutorials/setup-a-django-vm-with-vagrant-virtualbox-and-chef/
 
 https://github.com/pinax/pinax-project-account
+
+https://github.com/tjetzinger/django-pinax-skel/blob/master/docs/source/running-on-heroku.rst

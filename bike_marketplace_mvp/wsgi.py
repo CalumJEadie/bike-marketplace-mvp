@@ -29,3 +29,8 @@ application = get_wsgi_application()
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
+
+# Wrap application to serve static files on Heroku
+# https://devcenter.heroku.com/articles/getting-started-with-django#wsgi-py
+from dj_static import Cling
+application = Cling(get_wsgi_application())
