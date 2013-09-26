@@ -14,5 +14,22 @@
             "domain": "example.com", 
             "name": "example.com"
         }
+    },
+    {
+        "pk": 1, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "account": 1, 
+            "model_year": 2009, 
+            "name": "Trek 7100 Road Bike", 
+            "brakes": "Rim Brakes", 
+            "frame_material": "Aluminium", 
+            "brand": "Trek", 
+            "mileage": 4500, 
+            "frame_size": 58, 
+            "model": "7100", 
+            "type": "Road", 
+            "description": "Road bike speed and upright comfort join together for aggressive fitness rides or long commutes. Available with lightweight TCT Carbon or hydroformed Alpha Black Aluminum frames, rigid performance forks and fast-rolling 700c wheels.\r\nIf you want a practical bike for daily use or develop your cycling fitness as an alternative to the gym the Trek 7100 2009 Women's Hybrid Bike is a great option. Upright position, reliable easy to use brakes and gears with a durable wheel set means you can ride comfortably and safely whatever your journey.\r\n"
+        }
     }
 ]
