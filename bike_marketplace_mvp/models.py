@@ -77,6 +77,7 @@ class Bike(models.Model):
 If you want a practical bike for daily use or develop your cycling fitness as an alternative to the gym the Trek 7100 2009 Women's Hybrid Bike is a great option. Upright position, reliable easy to use brakes and gears with a durable wheel set means you can ride comfortably and safely whatever your journey.
 """)
     price = models.PositiveSmallIntegerField(blank=True, default=200)
+    verified_not_stolen = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.name
