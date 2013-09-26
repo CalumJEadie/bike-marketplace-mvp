@@ -1,3 +1,5 @@
+from string import Template
+
 from django.db import models
 from django.db.models.signals import post_save
 
@@ -13,7 +15,7 @@ class Seller(models.Model):
     has_facebook = models.BooleanField(default=True)
     facebook_friends = models.PositiveSmallIntegerField(blank=True, default=347)
     has_linkedin = models.BooleanField(default=True)
-    linkedins_connections = models.PositiveSmallIntegerField(blank=True, default=184)
+    linkedin_connections = models.PositiveSmallIntegerField(blank=True, default=184)
     has_road = models.BooleanField(default=True)
     has_single_track = models.BooleanField(default=True)
 
@@ -81,3 +83,14 @@ If you want a practical bike for daily use or develop your cycling fitness as an
 
     def __unicode__(self):
         return self.name
+
+    BIKEPEDIA_TEMPLATE_URL = Template("http://www.bikepedia.com/quickbike/BikeSpecs.aspx?Year=$year&Brand=$brand&Model=$model&Type=bike")
+
+    @property
+    def bikepedia_url(self):
+
+        return self.BIKEPEDIA_TEMPLATE_URL.substitute({
+            "brand": self.brand,
+            "model": self.model,
+            "year": self.model_year
+        })
