@@ -10,7 +10,7 @@
     {
         "pk": 2, 
         "model": "sites.site", 
-        "fields": {
+        "fields": { 
             "domain": "example.com", 
             "name": "example.com"
         }
@@ -29,7 +29,8 @@
             "frame_size": 58, 
             "model": "7100", 
             "type": "Road", 
-            "description": "Road bike speed and upright comfort join together for aggressive fitness rides or long commutes. Available with lightweight TCT Carbon or hydroformed Alpha Black Aluminum frames, rigid performance forks and fast-rolling 700c wheels.\r\nIf you want a practical bike for daily use or develop your cycling fitness as an alternative to the gym the Trek 7100 2009 Women's Hybrid Bike is a great option. Upright position, reliable easy to use brakes and gears with a durable wheel set means you can ride comfortably and safely whatever your journey.\r\n"
+            "description": "Road bike speed and upright comfort join together for aggressive fitness rides or long commutes. Available with lightweight TCT Carbon or hydroformed Alpha Black Aluminum frames, rigid performance forks and fast-rolling 700c wheels.\r\nIf you want a practical bike for daily use or develop your cycling fitness as an alternative to the gym the Trek 7100 2009 Women's Hybrid Bike is a great option. Upright position, reliable easy to use brakes and gears with a durable wheel set means you can ride comfortably and safely whatever your journey.\r\n",
+            "price": 150
         }
     },
     {
@@ -37,7 +38,7 @@
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
             "seller": 1, 
-            "model_year": 2011, 
+            "model_year": 2012, 
             "name": "Dawes Giro 200 Road Bike", 
             "brakes": "Rim Brakes", 
             "brand": "Dawes", 
@@ -45,7 +46,8 @@
             "frame_size": 58, 
             "model": "Giro 200", 
             "type": "Road", 
-            "description": ""
+            "description": "http://www.dawescycles.com/p-591-giro-200.aspx\n\nIf you're looking to get into road cycling then the Giro 200 is the bike for you. It features the same alloy frame as the other models in the Giro range meaning that the ride characteristics are just as good as our premium models. A lower price shouldn't mean a lower level of performance and that is definitely the motto for the Giro 200.",
+            "price": 200
         }
     },
     {
@@ -53,14 +55,16 @@
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
             "seller": 1, 
-            "name": "Dawes Ultra", 
+            "model_year": 2011, 
+            "name": "Burgundy Prinnacle Gabbro Hybrid", 
             "brakes": "Rim Brakes", 
-            "brand": "Dawes", 
+            "brand": "Pinnacle", 
             "mileage": 500, 
-            "frame_size": 58, 
-            "model": "Ultra", 
-            "type": "Road", 
-            "description": "http://www.ebay.co.uk/itm/Dawes-Ultra-stored-since-new-1995-SEE-PHOTOS-/251344125693?pt=UK_Bikes_GL&hash=item3a8546fefd.\r\n"
+            "frame_size": 45, 
+            "model": "Gabbro", 
+            "type": "Hybrid", 
+            "description": "http://www.evanscycles.com/products/pinnacle/gabbro-womens-road-bike-ec027481.\n\nFast, stable and comfortable, Gabbro is the ideal introductory bike to the world of sportive rides or those women looking for a fast, reliable and great looking commuter at an unbeatable price. A more compact frame geometry with low slung top tube combined with shorter crank arm length, stem, narrower handlebars and female specific saddle makes the Gabbro as comfortable for female riders as possible. Shimano’s new 8sp 2300 components take care of shifting duties whilst the FSA Tempo compact 50-34T chainset combined with the 12-25T cassette provide ample gear range for a variety of terrain. Mudguard mounts combined with 57mm long-drop dual pivot brake callipers ensure ample room and hassle-free fitting of full length mudguards for year-round versatility. An integrated headset and bladed forks blend seamlessly for ultra clean lines. Carbon legged fork helps drop overall weight but also help reduced road buzz and improve overall ride characteristics.",
+            "price": 400
         }
     },
     {
@@ -68,14 +72,84 @@
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
             "seller": 1, 
-            "name": "Giant Cadex 980C Road Bike", 
+            "model_year": 2011, 
+            "name": "Custom Mango Single-speed", 
             "brakes": "Rim Brakes", 
-            "brand": "Giant", 
-            "mileage": 2000, 
-            "frame_size": 58, 
-            "model": "Cadex 980C", 
+            "brand": "Mango Bikes", 
+            "mileage": 500, 
+            "frame_size": 52, 
+            "model": "Custom", 
+            "type": "Single Speed", 
+            "description": "http://www.mangobikes.co.uk/.",
+            "price": 150
+        }
+    },
+    {
+        "pk": 5, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 1998, 
+            "name": "Peugeot Monaco Road Bike 700CC", 
+            "brakes": "Rim Brakes", 
+            "brand": "Peugeot", 
+            "mileage": 500, 
+            "frame_size": 55, 
+            "model": "Monaco", 
             "type": "Road", 
-            "description": "http://www.ebay.co.uk/itm/Giant-Cadex-980C-Carbon-Fibre-Road-Bike-57cm-/121179646460?pt=UK_Bikes_GL&hash=item1c36dea9fc.\r\n"
+            "description": "",
+            "price": 120
+        }
+    },
+    {
+        "pk": 6, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 1997, 
+            "name": "Trek Multitrack 720", 
+            "brakes": "Rim Brakes", 
+            "brand": "Trek", 
+            "mileage": 500, 
+            "frame_size": 43, 
+            "model": "Multitrack 720", 
+            "type": "Hybrid", 
+            "description": "",
+            "price": 75
+        }
+    },
+    {
+        "pk": 7, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 2013, 
+            "name": "Boardman Pro 2013", 
+            "brakes": "Rim Brakes", 
+            "brand": "Boardman", 
+            "mileage": 500, 
+            "frame_size": 50, 
+            "model": "Pro", 
+            "type": "Hybrid", 
+            "description": "http://www.boardmanbikes.com/hybrid/hybrid_pro.html\n\nA superlight frame, full carbon fork with tapered steerer, BB30 chainset and SRAM 10 speed Double Tap gearing are the kind of specification you would expect on a high-end road race bike. The new Boardman Hybrid Pro gets these as standard to give incredible performance whilst still offering exceptional versatility.",
+            "price": 110
+        }
+    },
+    {
+        "pk": 8, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 2012, 
+            "name": "B'twin Triban 3", 
+            "brakes": "Rim Brakes", 
+            "brand": "B'twin", 
+            "mileage": 500, 
+            "frame_size": 55, 
+            "model": "Triban 3", 
+            "type": "Road", 
+            "description": "http://www.decathlon.co.uk/triban-3-red-road-bike-id_8274036.html\n\nhttp://www.cyclingweekly.co.uk/tech/bikes/129441/2/bike-test-do-you-get-what-you-pay-for.html",
+            "price": 250
         }
     }
 ]
