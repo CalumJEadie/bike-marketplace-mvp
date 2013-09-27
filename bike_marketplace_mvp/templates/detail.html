@@ -1,5 +1,6 @@
 {% extends "site_base.html" %}
 
+{% load staticfiles %}
 {% load i18n %}
 
 {% block head_title %}{{ bike.name }}{% endblock %}
@@ -12,10 +13,27 @@
 
         <div class="span8">
 
-            <div style="display: inline-block; position: relative; width:100%;">
-                <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/1" class="img-rounded" style="width: 100%;">
+            <div id="myCarousel" class="carousel slide" style="display: inline-block; position: relative; width:100%;">
+  
+                <ol class="carousel-indicators">
+                    {% for picture_id in picture_ids %}
+                    <li data-target="#myCarousel" data-slide-to="0"{% if forloop.first %}class="active"{% endif %}></li>
+                    {% endfor %}
+                </ol>
+
+                <div class="carousel-inner">
+                    {% for picture_id in picture_ids %}
+                    <div class="{% if forloop.first %}active {% endif %}item" data-slide-number="{{ forloop.counter0 }}">
+                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/{{ picture_id }}" class="img-rounded" style="width: 100%;" />
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
                 {% if bike.verified_not_stolen %}
-                    <img src="{{ STATIC_URL }}img/bike-not-stolen.png" style="width: 200px; height: 200px; position: absolute; top: 0; left: 0;">
+                <img src="{{ STATIC_URL }}img/bike-not-stolen.png" style="width: 200px; height: 200px; position: absolute; top: 0; left: 0;">
                 {% endif %}
             </div>
 
@@ -128,5 +146,11 @@
         </div>
 
     </div>
+
+{% endblock %}
+
+{% block extra_script %}
+
+    <script src="{% static "bootstrap/js/bootstrap-carousel.js" %}"></script>
 
 {% endblock %}
