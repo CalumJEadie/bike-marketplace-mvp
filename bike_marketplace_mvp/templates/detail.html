@@ -60,7 +60,7 @@
                     <td style="width:20%">Type:</td>
                     <td style="width:30%"><strong>{{ bike.type }}</strong></td>
                     <td style="width:20%">Frame Size:</td>
-                    <td style="width:30%"><strong>{{ bike.frame_size }}</strong></td>
+                    <td style="width:30%"><strong>{{ bike.frame_size }} cm</strong></td>
                 </tr>
 
                 <tr>
@@ -103,9 +103,9 @@
 
             <div style="border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
 
-                <h1>£{{ bike.price }}</h1>
+                <h1 class="text-info">£{{ bike.price }}</h1>
 
-                <h3>{{ bike.type }} / {{ bike.frame_size }}</h3>
+                <h3>{{ bike.type }} / {{ bike.frame_size }} cm</h3>
 
                 <button class="btn btn-large btn-success" type="button">Buy Now</button>
 
@@ -117,7 +117,7 @@
 
                 <img src="{{ STATIC_URL }}img/users/{{ bike.seller.account.id }}" class="img-rounded" style="width: 250px" />
 
-                <h1>{{ bike.seller.account.user.username }}</h1>
+                <h1>{{ bike.seller.account.user.username|capfirst }}</h1>
 
                 <button class="btn btn-large btn-block btn-primary" type="button">Contact Me</button>
 
@@ -127,7 +127,7 @@
 
                     {% if bike.seller.has_facebook %}
                     <tr>
-                        <td>Facebook</td>
+                        <td style="width: 30%">Facebook</td>
                         <td><strong>{{ bike.seller.facebook_friends }} friends</strong></td>
                     </tr>
                     {% endif %}
@@ -147,7 +147,7 @@
 
                     {% if bike.seller.has_road %}
                     <tr>
-                        <td>road.css</td>
+                        <td style="width: 30%">road.css</td>
                         <td><strong>Since May 2007, 43 posts</strong></td>
                     </tr>
                     {% endif %}
