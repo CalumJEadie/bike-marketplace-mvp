@@ -9,12 +9,15 @@
 
     <h3>{{ bike.name }}</h3>
 
+
+    <!-- Main Content -->
     <div class="row">
 
+        <!-- Left Column -->
         <div class="span8">
 
-            <div id="myCarousel" class="carousel slide" style="display: inline-block; position: relative; width:100%;">
-  
+            <!-- Carousel -->
+            <div id="myCarousel" class="carousel slide">
                 <ol class="carousel-indicators">
                     {% for picture_id in picture_ids %}
                     <li data-target="#myCarousel" data-slide-to="0"{% if forloop.first %}class="active"{% endif %}></li>
@@ -28,7 +31,7 @@
                     </div>
                     {% endfor %}
                 </div>
-                
+
                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                 <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 
@@ -36,7 +39,21 @@
                 <img src="{{ STATIC_URL }}img/bike-not-stolen.png" style="width: 200px; height: 200px; position: absolute; top: 0; left: 0;">
                 {% endif %}
             </div>
+            <!-- / Carousel -->
 
+            <!-- Thumbnails -->
+            <ul class="thumbnails">
+                {% for picture_id in picture_ids %}
+                <li class="span2">
+                    <a class="thumbnail" id="carousel-selector-{{ forloop.counter0 }}">
+                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/{{ picture_id }}" />
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <!-- / Thumbnails -->
+
+            <!-- Bike Details Table -->
             <table class="table table-striped table-bordered" style="margin-top: 1em">
 
                 <tr>
@@ -68,6 +85,7 @@
                 </tr>
 
             </table>
+            <!-- / Bike Details Table -->
 
 
 
@@ -78,7 +96,9 @@
             </p>
 
         </div>
+        <!-- / Left Column -->
 
+        <!-- Right Column -->
         <div class="span4">
 
             <div style="border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
@@ -144,13 +164,40 @@
             </div>
 
         </div>
+        <!-- / Right Column -->
 
     </div>
+    <!-- / Main Content -->
 
 {% endblock %}
 
 {% block extra_script %}
 
     <script src="{% static "bootstrap/js/bootstrap-carousel.js" %}"></script>
+
+
+
+
+<script>
+  jQuery(document).ready(function($) {
+
+        $('#myCarousel').carousel({
+                interval: 5000
+        });
+
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#myCarousel').carousel(id);
+        });
+
+
+
+
+});
+</script>
+
 
 {% endblock %}
