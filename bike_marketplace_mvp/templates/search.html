@@ -7,15 +7,36 @@
 
 {% block body %}
 
-    <form action="/search/" method="get" class="form-inline">
-            <label class="checkbox inline">
-                <input type="radio" name="gender" value="male">&nbsp;&nbsp;I'm a guy
+    <form action="{% url 'bike_marketplace_mvp.views.search' %}" method="get" class="form-inline">
+            <!-- <label class="checkbox inline">
+                <input name="gender" type="radio" value="m">&nbsp;&nbsp;I'm a guy
             </label>
             <label class="checkbox inline">
-                <input type="radio" name="gender" value="female">&nbsp;&nbsp;I'm a girl
+                <input name="gender" type="radio" value="f">&nbsp;&nbsp;I'm a girl
+            </label> -->
+            <!-- <select class="input-mini">
+                <option value="m">Guy</option>
+                <option value="f">Girl</option>
+            </select> -->
+            &nbsp;
+            <label>
+                Height: 
+                &nbsp;
+                <div class="input-append">
+                    <input id="id_height_feet" name="height_feet" type="text" style="width: 30px">
+                    <span class="add-on">feet</span>
+                </div>
+                &nbsp;
+                <div class="input-append">
+                    <input id="id_height_inches" name="height_inches" type="text" style="width: 30px">
+                    <span class="add-on">inches</span>
+                </div>
             </label>
             &nbsp;
-            <input type="text" class="input-medium" placeholder="How tall are you? (cm)">
+            <div class="input-prepend">
+                <span class="add-on">£</span>
+                <input id="id_max_price" name="max_price" type="text" class="input-mini">
+            </div>
             &nbsp;
             <button type="submit" class="btn">Search</button>
         </form>

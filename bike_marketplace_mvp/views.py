@@ -1,6 +1,12 @@
+import logging
+
 from django.shortcuts import render, get_object_or_404
+from django.core.mail import send_mail
 
 from models import Bike
+from forms import SearchForm
+
+logger = logging.getLogger(__name__)
 
 def detail(request, bike_id):
     bike = get_object_or_404(Bike, pk=bike_id)
@@ -20,5 +26,15 @@ def detail(request, bike_id):
     return render(request, 'detail.html', {'bike': bike, 'picture_ids': picture_ids[bike.id]})
 
 def search(request):
+    # bikes = Bike.objects.all()
+    # return render(request, 'search.html', {'bikes': bikes})
+
+    form = SearchForm(request.GET)
+    # if form.is_valid():
+    #     cd = form.cleaned_data
+
+    # else:
+
+
     bikes = Bike.objects.all()
-    return render(request, 'search.html', {'bikes': bikes})
+    return render(request, 'search.html', {'bikes': bikes, 'form': form})
