@@ -27,7 +27,7 @@
                 <div class="carousel-inner">
                     {% for picture_id in picture_ids %}
                     <div class="{% if forloop.first %}active {% endif %}item" data-slide-number="{{ forloop.counter0 }}">
-                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/{{ picture_id }}" class="img-rounded" style="width: 100%;" />
+                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/{{ picture_id }}-770" class="img-rounded" style="width: 100%;" />
                     </div>
                     {% endfor %}
                 </div>
@@ -46,7 +46,7 @@
                 {% for picture_id in picture_ids %}
                 <li class="span2">
                     <a class="thumbnail" id="carousel-selector-{{ forloop.counter0 }}">
-                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/{{ picture_id }}" />
+                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/{{ picture_id }}-160" />
                     </a>
                 </li>
                 {% endfor %}
