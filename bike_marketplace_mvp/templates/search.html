@@ -73,3 +73,23 @@
     </table>
 
 {% endblock %}
+
+
+{% block extra_script %}
+
+<script>
+  jQuery(document).ready(function($) {
+
+   $("form input").change(function() {
+     $("form").submit();
+   });
+
+   $("form select").change(function() {
+     $("form").submit();
+   });
+
+ });
+
+</script>
+
+{% endblock %}
