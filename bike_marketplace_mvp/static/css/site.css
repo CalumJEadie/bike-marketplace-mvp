@@ -1,4 +1,5 @@
 .hero-unit {
     background-image: url('../img/home/banner-1.jpg');
     background-size: cover;
+    background-position: right bottom;
 }
