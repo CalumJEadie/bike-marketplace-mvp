@@ -8,6 +8,10 @@ from forms import SearchForm
 
 logger = logging.getLogger(__name__)
 
+
+def home(request):
+    return render(request, 'home.html')
+
 def detail(request, bike_id):
     bike = get_object_or_404(Bike, pk=bike_id)
     picture_ids = range(1,3)
@@ -26,11 +30,8 @@ def detail(request, bike_id):
     return render(request, 'detail.html', {'bike': bike, 'picture_ids': picture_ids[bike.id]})
 
 def search(request):
-    # bikes = Bike.objects.all()
-    # return render(request, 'search.html', {'bikes': bikes})
 
     form = SearchForm(request.GET)
-    print form
     if form.is_valid():
         cd = form.cleaned_data
 

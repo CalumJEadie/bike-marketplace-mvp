@@ -1,0 +1,120 @@
+{% extends "banner_base.html" %}
+
+{% load i18n %}
+{% load url from future %}
+
+{% block head_title %}{% trans "Welcome" %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block banner %}
+        <h1>Find a bike you'll love.</h1>
+
+        <br/><br/>
+
+        <form id="human-to-bike" class="form-inline">
+            Height
+            &nbsp;
+            <div class="input-append">
+                <input id="id_height_feet" name="height_feet" type="text" style="width: 2em ">
+                <span class="add-on">feet</span>
+            </div>
+            &nbsp;
+            <div class="input-append">
+                <input id="id_height_inches" name="height_inches" type="text" style="width: 2em">
+                <span class="add-on">inches</span>
+            </div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            Max price
+            &nbsp;
+            <div class="input-prepend">
+                <span class="add-on">£</span>
+                <input id="id_max_price" name="max_price" type="text" class="input-mini" style="width:4em">
+            </div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+{% endblock %}
+    
+    
+{% block column-1 %}
+    <h3>Buy</h3>
+
+    <p>Real bikes from real people.</p>
+{% endblock %}
+
+{% block column-2 %}
+    <h3>Sell</h3>
+
+    <p>Upload photos and we'll do the specs.</p>
+{% endblock %}
+
+
+{% block column-3 %}
+    <h3>Trust</h3>
+
+    <p>The only premium marketplace for used bikes .</p>
+{% endblock %}
+
+{% block extra_script %}
+
+<script>
+  jQuery(document).ready(function($) {
+
+        $('#human-to-bike').submit(function(event){
+            height_feet = $("#id_height_feet").val()
+            height_inches = $("#id_height_inches").val()
+
+            if (height_feet && height_inches) {
+
+                inches = parseFloat(height_feet)*12 + parseFloat(height_inches)
+                height_cm = inches * 2.54
+
+                // Quick and dirty converion
+                frame_size_cm = height_cm * 0.33
+
+                if (frame_size_cm<30) {
+                    frame_size = "under_30"
+                } else if (frame_size_cm<35) {
+                    frame_size = "30_34"
+                } else if (frame_size_cm<40) {
+                    frame_size = "35_40"
+                } else if (frame_size_cm<45) {
+                    frame_size = "40_44"
+                } else if (frame_size_cm<50) {
+                    frame_size = "45_50"
+                } else if (frame_size_cm<55) {
+                    frame_size = "50_54"
+                } else if (frame_size_cm<60) {
+                    frame_size = "55_60"
+                } else {
+                    frame_size = "over_60"
+                }
+
+            } else {
+
+                frame_size = "any"
+
+            }
+
+            max_price = $("#id_max_price").val()
+
+            if (! max_price) {
+                max_price = 500
+            }
+
+            window.location.href = "{% url 'bike_marketplace_mvp.views.search' %}?frame_size=" + frame_size + "&max_price=" + max_price
+
+            event.preventDefault()
+        })
+
+});
+</script>
+
+
+{% endblock %}

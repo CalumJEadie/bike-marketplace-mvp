@@ -10,7 +10,8 @@ import views
 
 
 urlpatterns = patterns("",
-    url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
+    # url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
+    url(r"^$", views.home, name="home"),
     url(r"^admin/", include(admin.site.urls)),
     url(r"^account/", include("account.urls")),
 
