@@ -18,25 +18,18 @@
                 <option value="m">Guy</option>
                 <option value="f">Girl</option>
             </select> -->
+            Frame size
             &nbsp;
-            <label>
-                Height: 
-                &nbsp;
-                <div class="input-append">
-                    <input id="id_height_feet" name="height_feet" type="text" style="width: 30px">
-                    <span class="add-on">feet</span>
-                </div>
-                &nbsp;
-                <div class="input-append">
-                    <input id="id_height_inches" name="height_inches" type="text" style="width: 30px">
-                    <span class="add-on">inches</span>
-                </div>
-            </label>
+            {{ form.frame_size }}
+            &nbsp;
+            &nbsp;
+            Max price
             &nbsp;
             <div class="input-prepend">
                 <span class="add-on">£</span>
-                <input id="id_max_price" name="max_price" type="text" class="input-mini">
+                {{ form.max_price }}
             </div>
+            &nbsp;
             &nbsp;
             <button type="submit" class="btn">Search</button>
         </form>

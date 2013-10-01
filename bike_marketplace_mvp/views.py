@@ -30,11 +30,20 @@ def search(request):
     # return render(request, 'search.html', {'bikes': bikes})
 
     form = SearchForm(request.GET)
-    # if form.is_valid():
-    #     cd = form.cleaned_data
+    print form
+    if form.is_valid():
+        cd = form.cleaned_data
 
-    # else:
+        max_price = cd['max_price']
+        print cd['frame_size']
+        min_frame_size, max_frame_size = cd['frame_size']
 
+        bikes = Bike.objects.filter(price__lt=max_price, \
+            frame_size__gt=min_frame_size, \
+            frame_size__lt=max_frame_size)
 
-    bikes = Bike.objects.all()
+    else:
+        form = SearchForm()
+        bikes = Bike.objects.all()
+
     return render(request, 'search.html', {'bikes': bikes, 'form': form})
