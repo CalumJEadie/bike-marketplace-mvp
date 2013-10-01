@@ -2,10 +2,12 @@
     background-image: url('../img/home/banner-1.jpg');
     background-size: cover;
     background-position: right bottom;
+    min-height: 300px;
 }
 
 .hero-unit h1 {
     text-shadow: 2px 2px 2px black;
+    color: white;
 }
 
 .hero-unit form {
@@ -13,10 +15,16 @@
     padding: 1em;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
     border: 1px solid rgba(0,0,0,0.8);
-    display: inline;
+    display: inline-block;
     background: rgba(0,0,0,0.8);
 }
 
 .hero-unit form > span {
     color: white;
+}
+
+.hero-unit form input,
+.hero-unit form select,
+.hero-unit form .add-on, {
+    font-size: 17.5px;
 }
