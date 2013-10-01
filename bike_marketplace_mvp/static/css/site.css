@@ -25,6 +25,7 @@
 
 .hero-unit form input,
 .hero-unit form select,
-.hero-unit form .add-on, {
+.hero-unit form .add-on,
+.hero-unit form > span {
     font-size: 17.5px;
 }
