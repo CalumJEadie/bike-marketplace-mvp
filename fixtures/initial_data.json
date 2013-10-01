@@ -46,8 +46,9 @@
             "frame_size": 58, 
             "model": "Giro 200", 
             "type": "Road", 
-            "description": "http://www.dawescycles.com/p-591-giro-200.aspx\n\nIf you're looking to get into road cycling then the Giro 200 is the bike for you. It features the same alloy frame as the other models in the Giro range meaning that the ride characteristics are just as good as our premium models. A lower price shouldn't mean a lower level of performance and that is definitely the motto for the Giro 200.",
-            "price": 200
+            "description": "If you're looking to get into road cycling then the Giro 200 is the bike for you. It features the same alloy frame as the other models in the Giro range meaning that the ride characteristics are just as good as our premium models. A lower price shouldn't mean a lower level of performance and that is definitely the motto for the Giro 200.",
+            "price": 200,
+            "manufacturer_specs": "http://www.dawescycles.com/p-591-giro-200.aspx"
         }
     },
     {
@@ -63,8 +64,9 @@
             "frame_size": 45, 
             "model": "Gabbro", 
             "type": "Hybrid", 
-            "description": "http://www.evanscycles.com/products/pinnacle/gabbro-womens-road-bike-ec027481.\n\nFast, stable and comfortable, Gabbro is the ideal introductory bike to the world of sportive rides or those women looking for a fast, reliable and great looking commuter at an unbeatable price. A more compact frame geometry with low slung top tube combined with shorter crank arm length, stem, narrower handlebars and female specific saddle makes the Gabbro as comfortable for female riders as possible. Shimano’s new 8sp 2300 components take care of shifting duties whilst the FSA Tempo compact 50-34T chainset combined with the 12-25T cassette provide ample gear range for a variety of terrain. Mudguard mounts combined with 57mm long-drop dual pivot brake callipers ensure ample room and hassle-free fitting of full length mudguards for year-round versatility. An integrated headset and bladed forks blend seamlessly for ultra clean lines. Carbon legged fork helps drop overall weight but also help reduced road buzz and improve overall ride characteristics.",
-            "price": 400
+            "description": "Fast, stable and comfortable, Gabbro is the ideal introductory bike to the world of sportive rides or those women looking for a fast, reliable and great looking commuter at an unbeatable price. A more compact frame geometry with low slung top tube combined with shorter crank arm length, stem, narrower handlebars and female specific saddle makes the Gabbro as comfortable for female riders as possible. Shimano’s new 8sp 2300 components take care of shifting duties whilst the FSA Tempo compact 50-34T chainset combined with the 12-25T cassette provide ample gear range for a variety of terrain. Mudguard mounts combined with 57mm long-drop dual pivot brake callipers ensure ample room and hassle-free fitting of full length mudguards for year-round versatility. An integrated headset and bladed forks blend seamlessly for ultra clean lines. Carbon legged fork helps drop overall weight but also help reduced road buzz and improve overall ride characteristics.",
+            "price": 400,
+            "manufacturer_specs": "http://www.evanscycles.com/products/pinnacle/gabbro-womens-road-bike-ec027481"
         }
     },
     {
@@ -80,8 +82,9 @@
             "frame_size": 52, 
             "model": "Custom", 
             "type": "Single Speed", 
-            "description": "http://www.mangobikes.co.uk/.",
-            "price": 150
+            "description": "",
+            "price": 150,
+            "manufacturer_specs": "http://www.mangobikes.co.uk/"
         }
     },
     {
@@ -131,8 +134,9 @@
             "frame_size": 50, 
             "model": "Pro", 
             "type": "Hybrid", 
-            "description": "http://www.boardmanbikes.com/hybrid/hybrid_pro.html\n\nA superlight frame, full carbon fork with tapered steerer, BB30 chainset and SRAM 10 speed Double Tap gearing are the kind of specification you would expect on a high-end road race bike. The new Boardman Hybrid Pro gets these as standard to give incredible performance whilst still offering exceptional versatility.",
-            "price": 110
+            "description": "A superlight frame, full carbon fork with tapered steerer, BB30 chainset and SRAM 10 speed Double Tap gearing are the kind of specification you would expect on a high-end road race bike. The new Boardman Hybrid Pro gets these as standard to give incredible performance whilst still offering exceptional versatility.",
+            "price": 110,
+            "manufacturer_specs": "http://www.boardmanbikes.com/hybrid/hybrid_pro.html"
         }
     },
     {
@@ -148,8 +152,9 @@
             "frame_size": 55, 
             "model": "Triban 3", 
             "type": "Road", 
-            "description": "http://www.decathlon.co.uk/triban-3-red-road-bike-id_8274036.html\n\nhttp://www.cyclingweekly.co.uk/tech/bikes/129441/2/bike-test-do-you-get-what-you-pay-for.html",
-            "price": 250
+            "description": "http://www.cyclingweekly.co.uk/tech/bikes/129441/2/bike-test-do-you-get-what-you-pay-for.html",
+            "price": 250,
+            "manufacturer_specs": "http://www.decathlon.co.uk/triban-3-red-road-bike-id_8274036.html"
         }
     }
 ]

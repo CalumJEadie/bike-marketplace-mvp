@@ -49,12 +49,10 @@
             </ul>
             <!-- / Thumbnails -->
 
-
-
-    <div class="alert alert-info">
-          <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
-          Verified not stolen. <a>Find out more </a>
-    </div>
+            <div class="alert alert-info">
+                  <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+                This bike has been checked against police databases and verified as not stolen. <a href="">Find out more</a>.
+            </div>
 
             <!-- Bike Details Table -->
             <table class="table table-striped table-bordered" style="margin-top: 1em">
@@ -90,13 +88,21 @@
             </table>
             <!-- / Bike Details Table -->
 
-
-
-            <p>{{ bike.description }}</p>
-
             <p>
-                <a href="{{ bike.bikepedia_url }}">View more information at BikePedia &raquo;</a>
+                {% if bike.manufacturer_specs %}
+                <a href="{{ bike.manufacturer_specs }}" class="btn btn-info">View original manufacturer specifications</a>
+                {% endif %}
+
+                {% if bike.bikepedia_url %}
+                <a href="{{ bike.bikepedia_url }}" class="btn btn-info">View this model on BikePedia</a>
+                {% endif %}
             </p>
+
+            <br/>
+
+            {% if bike.description %}
+            <p class="well">{{ bike.description }}</p>
+            {% endif %}
 
         </div>
         <!-- / Left Column -->

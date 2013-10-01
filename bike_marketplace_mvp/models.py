@@ -80,6 +80,7 @@ If you want a practical bike for daily use or develop your cycling fitness as an
 """)
     price = models.PositiveSmallIntegerField(blank=True, default=200)
     verified_not_stolen = models.BooleanField(default=True)
+    manufacturer_specs = models.URLField(blank=True)
 
     def __unicode__(self):
         return self.name
