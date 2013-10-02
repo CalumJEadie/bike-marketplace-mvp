@@ -3,7 +3,7 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block head_title %}{{ seller.account.user.username|capfirst }}{% endblock %}
+{% block head_title %}{{ seller.name|capfirst }}{% endblock %}
 
 {% block body %}
 
@@ -11,11 +11,11 @@
 
     <div class="span4 offset4" style="text-align: center">
 
-        <img src="{{ STATIC_URL }}img/users/{{ seller.account.id }}" class="img-rounded" style="width: 250px" />
+        <img src="{{ STATIC_URL }}img/users/{{ seller.id }}" class="img-rounded" style="width: 250px" />
 
         <br/><br/>
 
-        <h1>{{ seller.account.user.username|capfirst }}</h1>
+        <h1>{{ seller.name|capfirst }}</h1>
 
         <br/>
 

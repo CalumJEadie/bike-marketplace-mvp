@@ -126,9 +126,9 @@
 
             <div style="margin-top:1em; border: black 1px solid; border-radius: 20px; padding: 20px; text-align: center">
 
-                <img src="{{ STATIC_URL }}img/users/{{ bike.seller.account.id }}" class="img-rounded" style="width: 250px" />
+                <img src="{{ STATIC_URL }}img/users/{{ bike.seller.id }}" class="img-rounded" style="width: 250px" />
 
-                <h1>{{ bike.seller.account.user.username|capfirst }}</h1>
+                <h1>{{ bike.seller.name|capfirst }}</h1>
 
                 <button class="btn btn-large btn-block btn-primary" type="button">Contact Me</button>
 

@@ -7,10 +7,12 @@ from account.models import Account
 
 class Seller(models.Model):
     """
-    Following design pattern from http://gistflow.com/posts/725-how-to-extend-the-behaviour-of-the-user-class-in-django-1-5.
+    # Following design pattern from http://gistflow.com/posts/725-how-to-extend-the-behaviour-of-the-user-class-in-django-1-5.
     """
 
-    account = models.OneToOneField(Account, unique=True)
+    # account = models.OneToOneField(Account, unique=True)
+
+    name = models.CharField(max_length=100)
 
     has_facebook = models.BooleanField(default=True)
     facebook_friends = models.PositiveSmallIntegerField(blank=True, default=347)
@@ -19,15 +21,15 @@ class Seller(models.Model):
     has_road = models.BooleanField(default=True)
     has_single_track = models.BooleanField(default=True)
 
-    @classmethod
-    def _create(cls, sender, instance, created, **kwargs):
-        if created:
-            profile, created = cls.objects.get_or_create(account=instance)
+    # @classmethod
+    # def _create(cls, sender, instance, created, **kwargs):
+    #     if created:
+    #         profile, created = cls.objects.get_or_create(account=instance)
 
     def __unicode__(self):
         return unicode(self.account)
 
-post_save.connect(Seller._create, sender=Account)
+# post_save.connect(Seller._create, sender=Account)
 
 class Bike(models.Model):
 
