@@ -118,9 +118,9 @@
 
                 <h3>{{ bike.type }} / {{ bike.frame_size }} cm</h3>
 
-                <button class="btn btn-large btn-success" type="button">Buy Now</button>
+                <a class="btn btn-large btn-success" type="button" href="#contact-seller" data-toggle="modal">Buy Now</a>
 
-                <button class="btn btn-large btn-success" type="button">Arrange Viewing</button>
+                <a class="btn btn-large btn-success" type="button" href="#contact-seller" data-toggle="modal">Arrange Viewing</a>
 
             </div>
 
@@ -130,7 +130,7 @@
 
                 <h1>{{ bike.seller.name|capfirst }}</h1>
 
-                <button class="btn btn-large btn-block btn-primary" type="button">Contact Me</button>
+                <a class="btn btn-large btn-block btn-primary" type="button" href="#contact-seller" data-toggle="modal">Contact Me</a>
 
                 <table class="table table-bordered" style="margin-top: 20px">
 
@@ -179,6 +179,64 @@
 
     </div>
     <!-- / Main Content -->
+
+
+    <!-- Contact Seller Modal -->
+    <div id="contact-seller" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Contact {{ bike.seller.name|capfirst }}</h3>
+        </div>
+
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="$('#contact-seller').modal('hide')"></iframe>
+
+        <form class="form-horizontal" action="https://docs.google.com/forms/d/1FLm9PvVKYK4zEP-VBcW0CpbL4BI4ktSesJazIjgiDls/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+
+            <div class="modal-body">
+
+                <br/>
+
+                <div class="control-group">
+                    <label class="control-label">To</label>
+                    <div class="controls">
+                        <span class="input-xlarge uneditable-input">{{ bike.seller.name|capfirst }}</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <div class="controls">
+                        <input name="entry_1895111188" type="text" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Email</label>
+                    <div class="controls">
+                        <input name="entry.1875336181" type="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Message</label>
+                    <div class="controls">
+                        <textarea name="entry.137695598" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button name="submit" type="submit" class="btn btn-primary">Send message</button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- /Contact Seller Modal -->
 
 {% endblock %}
 
