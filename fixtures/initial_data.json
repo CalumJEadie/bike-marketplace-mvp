@@ -192,7 +192,7 @@
         }
     },
     {
-        "pk": 1, 
+        "pk": 7, 
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
             "seller": 9, 
@@ -210,7 +210,7 @@
         }
     },
     {
-        "pk": 2, 
+        "pk": 8, 
         "model": "bike_marketplace_mvp.bike", 
         "fields": {
             "seller": 1, 
