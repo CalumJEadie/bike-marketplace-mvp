@@ -17,14 +17,14 @@ def detail(request, bike_id):
     picture_ids = range(1,3)
 
     picture_ids = {
-        1: [1],
-        2: [1],
+        1: range(1,9),
+        2: range(1,9),
         3: range(1,9),
         4: range(1,7),
         5: range(1,10),
         6: range(1,9),
-        7: range(1,9),
-        8: range(1,9),
+        7: [1],
+        8: [1]
     }
 
     return render(request, 'detail.html', {'bike': bike, 'picture_ids': picture_ids[bike.id]})
