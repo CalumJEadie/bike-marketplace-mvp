@@ -29,3 +29,7 @@
 .hero-unit form > span {
     font-size: 17.5px;
 }
+
+.thumbnails > li {
+    margin-left: 20px;
+}

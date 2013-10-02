@@ -3,7 +3,7 @@ import logging
 from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail
 
-from models import Bike
+from models import Bike, Seller
 from forms import SearchForm
 
 logger = logging.getLogger(__name__)
@@ -48,3 +48,7 @@ def search(request):
         bikes = Bike.objects.all()
 
     return render(request, 'search.html', {'bikes': bikes, 'form': form})
+
+def seller_detail(request, seller_id):
+    seller = get_object_or_404(Seller, pk=seller_id)
+    return render(request, 'seller.html', {'seller': seller})

@@ -1,0 +1,70 @@
+{% extends "site_base.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head_title %}{{ seller.name }}{% endblock %}
+
+{% block body %}
+
+<div class="row">
+
+    <div class="span4 offset4" style="text-align: center">
+
+        <img src="{{ STATIC_URL }}img/users/{{ seller.account.id }}" class="img-rounded" style="width: 250px" />
+
+        <br/><br/>
+
+        <h1>{{ seller.account.user.username|capfirst }}</h1>
+
+        <br/>
+
+        <button class="btn btn-large btn-block btn-primary" type="button">Contact Me</button>
+
+        <br/>
+
+        <table class="table table-bordered" style="margin-top: 20px">
+
+            <caption>Social Media</caption>
+
+            {% if seller.has_facebook %}
+            <tr>
+                <td style="width: 30%">Facebook</td>
+                <td><strong>{{ seller.facebook_friends }} friends</strong></td>
+            </tr>
+            {% endif %}
+
+            {% if seller.has_linkedin %}
+            <tr>
+                <td>Linkedin</td>
+                <td><strong>{{ seller.linkedin_connections }} connections</strong></td>
+            </tr>
+            {% endif %}
+
+        </table>
+
+        <table class="table table-bordered" style="margin-top: 20px">
+
+            <caption>Forum Memberships</caption>
+
+            {% if seller.has_road %}
+            <tr>
+                <td style="width: 30%">road.css</td>
+                <td><strong>Since May 2007, 43 posts</strong></td>
+            </tr>
+            {% endif %}
+
+            {% if seller.has_single_track %}
+            <tr>
+                <td>SingleTrack</td>
+                <td><strong>Since January 2010, 22 posts</strong></td>
+            </tr>
+            {% endif %}
+
+        </table>
+
+    </div>
+
+</div>      
+
+{% endblock %}

@@ -52,13 +52,19 @@
 
     <ul class="thumbnails">
         <li>
-            <img src="{{ STATIC_URL }}img/home/buy-1.jpg" />
+            <a href="{% url 'bike_marketplace_mvp.views.seller_detail' 2 %}" class="thumbnail">
+                <img src="{{ STATIC_URL }}img/home/buy-1.jpg" />
+            </a>
         </li>
         <li>
-            <img src="{{ STATIC_URL }}img/home/buy-2.jpg" />
+            <a href="{% url 'bike_marketplace_mvp.views.seller_detail' 3 %}" class="thumbnail">
+                <img src="{{ STATIC_URL }}img/home/buy-2.jpg" />
+            </a>
         </li>
         <li>
-            <img src="{{ STATIC_URL }}img/home/buy-3.jpg" />
+            <a href="{% url 'bike_marketplace_mvp.views.seller_detail' 4 %}" class="thumbnail">
+                <img src="{{ STATIC_URL }}img/home/buy-3.jpg" />
+            </a>
         </li>
     </ul>
 {% endblock %}
@@ -72,13 +78,19 @@
 
     <ul class="thumbnails">
         <li>
-            <img src="{{ STATIC_URL }}img/home/sell-1.jpg" />
+            <a href="{% url 'bike_marketplace_mvp.views.detail' 2 %}" class="thumbnail">
+                <img src="{{ STATIC_URL }}img/home/sell-1.jpg" />
+            </a>
         </li>
         <li>
-            <img src="{{ STATIC_URL }}img/home/sell-2.jpg" />
+            <a href="{% url 'bike_marketplace_mvp.views.detail' 2 %}" class="thumbnail">
+                <img src="{{ STATIC_URL }}img/home/sell-2.jpg" />
+            </a>
         </li>
         <li>
-            <img src="{{ STATIC_URL }}img/home/sell-3.jpg" />
+            <a href="{% url 'bike_marketplace_mvp.views.detail' 2 %}" class="thumbnail">
+                <img src="{{ STATIC_URL }}img/home/sell-3.jpg" />
+            </a>
         </li>
     </ul>
 
