@@ -3,7 +3,7 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block head_title %}{{ seller.name }}{% endblock %}
+{% block head_title %}{{ seller.account.user.username|capfirst }}{% endblock %}
 
 {% block body %}
 
