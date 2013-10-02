@@ -1,0 +1,60 @@
+{% extends "site_base.html" %}
+
+{% comment %}
+Based on http://code61.org/lp2/#!3_google_forms.
+{% endcomment %}
+
+{% load i18n %}
+{% load url from future %}
+
+{% block head_title %}Contact{% endblock %}
+
+{% block body %}
+
+<div class="row">
+
+    <div class="span4 offset4">
+
+        <h1 class="text-center">Contact</h1>
+
+        <br/>
+
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='/thanks/';}"></iframe>
+
+        <form class="form-horizontal" action="https://docs.google.com/forms/d/1FLm9PvVKYK4zEP-VBcW0CpbL4BI4ktSesJazIjgiDls/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+             <div class="control-group">
+                <label class="control-label">Name</label>
+                <div class="controls">
+                    <input name="entry_1895111188" type="text" placeholder="Name">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Email</label>
+                <div class="controls">
+                    <input name="entry.1875336181" type="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label">Message</label>
+                <div class="controls">
+                    <textarea name="entry.137695598" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <button name="submit" class="btn" type="submit">Send</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

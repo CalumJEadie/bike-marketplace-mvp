@@ -25,6 +25,10 @@ urlpatterns = patterns("",
     url(r'^sellers/(?P<seller_id>\d+)/$', views.seller_detail, name='seller'),
 
     url(r"^about/$", TemplateView.as_view(template_name="about.html"), name="about"),
+
+    url(r"^contact/$", TemplateView.as_view(template_name="contact.html"), name="contact"),
+
+    url(r"^thanks/$", TemplateView.as_view(template_name="thanks.html"), name="thanks"),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
