@@ -34,43 +34,60 @@
             <button type="submit" class="btn">Search</button>
         </form>
 
-    <table class="table table-striped">
-    {% for bike in bikes %}
+    {% if bikes %}
 
-        <tr><td>
-            
-            <div class="row">
-                <div class="span3">
-                    <a href="/bikes/{{ bike.pk }}/">
-                        <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/1-270" class="img-rounded" />
-                    </a>
-                </div>
-                <div class="span2">
-                    <img src="{{ STATIC_URL }}img/users/{{ bike.seller.id }}" class="img-rounded" />
-                </div>
-                <div class="span5">
-                    <a href="/bikes/{{ bike.pk }}/">
-                        <h3>{{ bike.name }}</h3>
-                    </a>
-                    <p>
-                        Brand: <strong>{{ bike.brand }}</strong>
-                    </p>
-                    <p>
-                        Model: <strong>{{ bike.model }}</strong>
-                    </p>
-                    <p>
-                        Year: <strong>{{ bike.model_year }}</strong>
-                    </p>
-                </div>
-                <div class="span1">
-                    <h1>£{{ bike.price }}</h1>
-                </div>
-            </div>
-            
-        </td></tr>
+        <table class="table table-striped">
+        {% for bike in bikes %}
 
-    {% endfor %}
-    </table>
+            <tr><td>
+                
+                <div class="row">
+                    <div class="span3">
+                        <a href="/bikes/{{ bike.pk }}/">
+                            <img src="{{ STATIC_URL }}img/bikes/{{ bike.id }}/1-270" class="img-rounded" />
+                        </a>
+                    </div>
+                    <div class="span2">
+                        <img src="{{ STATIC_URL }}img/users/{{ bike.seller.id }}" class="img-rounded" />
+                    </div>
+                    <div class="span5">
+                        <a href="/bikes/{{ bike.pk }}/">
+                            <h3>{{ bike.name }}</h3>
+                        </a>
+                        <p>
+                            Brand: <strong>{{ bike.brand }}</strong>
+                        </p>
+                        <p>
+                            Model: <strong>{{ bike.model }}</strong>
+                        </p>
+                        <p>
+                            Year: <strong>{{ bike.model_year }}</strong>
+                        </p>
+                    </div>
+                    <div class="span1">
+                        <h1>£{{ bike.price }}</h1>
+                    </div>
+                </div>
+                
+            </td></tr>
+
+        {% endfor %}
+        </table>
+
+    {% else %}
+
+        <br/>   
+
+        <p class="text-center">There are currently no bikes being sold matching your search.</p>
+
+        <br/>
+
+        <p class="text-center">
+            <a class="btn" href="{% url 'bike_marketplace_mvp.views.search' %}">Try a broader search</a>
+        </p>
+
+
+    {% endif %}
 
 {% endblock %}
 
