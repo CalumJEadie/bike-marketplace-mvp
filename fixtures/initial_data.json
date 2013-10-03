@@ -226,5 +226,23 @@
             "price": 200,
             "manufacturer_specs": "http://www.dawescycles.com/p-591-giro-200.aspx"
         }
+    },
+    {
+        "pk": 9, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 2012, 
+            "name": "Pretorius Longtom Fixed / Singlespeed Titanium Bike 52cm", 
+            "brakes": "Caliper - Side Pull", 
+            "brand": "Pretorius", 
+            "mileage": 1000, 
+            "frame_size": 52, 
+            "model": "Longtom", 
+            "type": "Road", 
+            "description": "Hi\n\nAfter receiving a hefty tax bill I am having to sell some of my beloved bikes and cycling bit\n\nFor auction today is my Pretorius Longtom Titanium fixed, custom sprayed in pearl white\n\nSize: 52cm with a 52cm effective top tube \nHeadset: Tune bobo\nForks: ENVE 2.0 full carbon\nBrake Lever: Campagnolo Veloce\nBrake Callipers: Campagnolo Veloce\nBar tape: NEW Arundel Cork\nBars: 3T Ergosum 40cm c-c\nStem: ITM Alu 110mm\nSeat post: Ritchey Classis\nSeat: Fizik Arione with carbon braided rails\nWheels: Handbuilt Ambrosio Excellence rims on Miche Pimato hubs\nTyres: Continental GP4000S\nChainset: Miche Primato\nBB: Miche\nChain: Miche\nRatio: Perfect for town riding, 48/19\nNew would cost in the region of £1900\n\nThere is a small paint chip on the toptube and some scuff marks on the cranks, please see photo's, otherwise it's in just about in new condition.",
+            "price": 500,
+            "manufacturer_specs": "http://item.mobileweb.ebay.co.uk/viewitem?itemId=171130843169"
+        }
     }
 ]

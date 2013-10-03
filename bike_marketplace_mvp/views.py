@@ -24,7 +24,8 @@ def detail(request, bike_id):
         5: range(1,10),
         6: range(1,9),
         7: [1],
-        8: [1]
+        8: [1],
+        9: range(1,9),
     }
 
     return render(request, 'detail.html', {'bike': bike, 'picture_ids': picture_ids[bike.id]})
