@@ -244,5 +244,39 @@
             "price": 500,
             "manufacturer_specs": "http://item.mobileweb.ebay.co.uk/viewitem?itemId=171130843169"
         }
+    },
+    {
+        "pk": 10, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 1972, 
+            "name": "Mercier retro 1970s road bike ", 
+            "brakes": "Caliper Brakes", 
+            "brand": "Mercier", 
+            "mileage": 1000, 
+            "frame_size": 52,    
+            "model": "Unknown", 
+            "type": "Road", 
+            "description": "Here is a French classic from around 1970s. This bike has the classic centre pull mafic racer brakes,simplex gears and San Marco seat, these bikes are rare in this condition considering the year. The frame measures 22 inch from crank to seat post, located 1 hour from London on the charing cross to ashford line,any questions please ask.",
+            "price": 150
+        }
+    },
+    {
+        "pk": 11, 
+        "model": "bike_marketplace_mvp.bike", 
+        "fields": {
+            "seller": 1, 
+            "model_year": 2013, 
+            "name": "Brompton", 
+            "brakes": "Caliper - Side Pull", 
+            "brand": "Brompton", 
+            "mileage": 1000, 
+            "frame_size": 52,    
+            "model": "Custom", 
+            "type": "Folding Bike", 
+            "description": "This is custom build Brompton 8speed, 11-21cassette, 61t chainring with fsa k-light cranks, shimano xtr shifters, XT rear deraileur, hope evo pro 2 rear hub, panther front suspension hub, Brompton rims, internal cabeling, race face seat post, specialized seat. TRP brake calipers. All in new condition, built as my project to check what I can do with Brompton frame, and it's still folding perfectly and quicker with help of quick realises instead of Brompton handles. There is more pictures to show, just ask",
+            "price": 1550
+        }
     }
 ]
