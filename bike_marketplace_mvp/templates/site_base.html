@@ -1,0 +1,152 @@
+{% extends "theme_base.html" %}
+
+{% load metron_tags %}
+{% load i18n %}
+
+{% block extra_style %}
+    <link href="{{ STATIC_URL }}css/site.css" rel="stylesheet">
+{% endblock %}
+
+{% block extra_head_base %}
+    {% block extra_head %}{% endblock %}
+{% endblock %}
+
+
+{% block nav %}
+    {% include "_nav.html" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "_footer.html" %}
+{% endblock %}
+
+{% block extra_body_base %}
+
+    <!-- Contact Modal -->
+    <div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Contact us</h3>
+        </div>
+
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe_contact" id="hidden_iframe_contact" style="display:none;" onload="$('#contact').modal('hide')"></iframe>
+
+        <form class="form-horizontal" action="https://docs.google.com/forms/d/1FLm9PvVKYK4zEP-VBcW0CpbL4BI4ktSesJazIjgiDls/formResponse" method="POST" target="hidden_iframe_contact" onsubmit="submitted=true;">
+
+
+            <div class="modal-body">
+
+                <br/>
+
+
+
+                <p class="text-center" style="margin-left: auto; margin-right: auto; width:350px;">
+                    We would love to hear your thoughts.
+                </p>
+
+                <p class="text-center" style="margin-left: auto; margin-right: auto; width:350px;">
+                    Contact us directly at XXXXXXXXXXX or XXXXXXXXXXX or send us a message below.
+                </p>
+
+                <br/>
+
+                <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <div class="controls">
+                        <input name="entry_1895111188" type="text" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Email</label>
+                    <div class="controls">
+                        <input name="entry.1875336181" type="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Message</label>
+                    <div class="controls">
+                        <textarea name="entry.137695598" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button name="submit" type="submit" class="btn btn-primary">Send message</button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- /Contact Modal -->
+
+    <!-- Advertise a bike Modal -->
+    <div id="advertise-bike" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Advertise a bike</h3>
+        </div>
+
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe_advertise_bike" id="hidden_iframe_advertise_bike" style="display:none;" onload="$('#advertise-bike').modal('hide')"></iframe>
+
+        <form class="form-horizontal" action="https://docs.google.com/forms/d/1FLm9PvVKYK4zEP-VBcW0CpbL4BI4ktSesJazIjgiDls/formResponse" method="POST" target="hidden_iframe_advertise_bike" onsubmit="submitted=true;">
+
+
+            <div class="modal-body">
+
+                <br/>
+
+                <p class="text-center" style="margin-left: auto; margin-right: auto; width:350px;">
+                    Thanks for your interest. Sign up here for priority access to our marketplace.
+                </p>
+
+                <br/>
+
+                <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <div class="controls">
+                        <input name="entry_1895111188" type="text" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Email</label>
+                    <div class="controls">
+                        <input name="entry.1875336181" type="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Phone Number</label>
+                    <div class="controls">
+                        <input name="entry.137695598" type="text" placeholder="(optional)">
+                    </div>
+                </div>
+
+                <br/>
+
+                <p class="text-center" style="margin-left: auto; margin-right: auto; width:400px;">
+                    We'll be in touch soon.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button name="submit" type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- /Advertise a bike Modal -->
+
+
+    {% analytics %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}
