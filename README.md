@@ -1,9 +1,34 @@
-bike-marketplace-mvp
+Bike Marketplace MVP
 ====================
 
-http://bike-marketplace-mvp.herokuapp.com/
+A prototype for exploring trust and buying decisions in peer to peer marketplaces.
 
-Bike Marketplace MVP.
+Screenshots
+-----------
+
+!["Home"](screenshots/home.png)
+
+!["Results"](screenshots/results.png)
+
+!["Detail 1"](screenshots/detail-1.png)
+
+!["Detail 2"](screenshots/detail-2.png)
+
+!["Contact Us"](screenshots/contact-us.png)
+
+!["Contact Seller"](screenshots/contact-seller.png)
+
+Made with
+---------
+
+- Django
+- Pinax
+- Vagrant
+- Heroku
+- Bootstrap
+- Google Forms
+
+--------------------------------------------------------------------------------
 
 Developing locally
 ------------------
